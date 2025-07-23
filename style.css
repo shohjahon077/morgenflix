@@ -1,0 +1,246 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.div1 {
+    
+    width: 100%;
+    height: 80px;
+    background-color: rgb(0, 0, 0);
+    border-bottom: 2px solid red;
+    position: fixed;
+}
+
+body {
+    background-color: black;
+    width: 100%;
+    height: 100000px;
+}
+
+img {
+    margin: 12%;
+    
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+}
+
+
+
+
+
+
+.n1 {
+    margin:20px 50px;
+    width: 100px;
+    height: 100px;
+   
+}
+
+
+
+.img1{
+    width: 100%;
+    height: 100%;
+    border: 1px solid wheat;
+    border-radius: 1%;
+}
+
+
+
+
+
+
+
+.n2 {
+    
+    
+    margin:-120px 220px;
+    width: 100px;
+    height: 100px;
+    
+   
+}
+
+.img2 {
+    width: 100%;
+    height: 100%;
+    border: 1px solid wheat;
+    border-radius: 1%;
+}
+
+h2 {
+    text-align: center;
+    color: aliceblue;
+}
+
+h4 {
+    text-align: center;
+    color: aliceblue;
+}
+
+i {
+    margin: 5% 4%;
+    font-size: 50px;
+}
+
+#loo {
+    margin: -4% ;
+    font-size: 25px;
+    color: aquamarine;
+}
+
+
+.n3 {
+    margin:220px 50px;
+    width: 100px;
+    height: 100px;
+   
+}
+
+.img3 {
+    width: 100%;
+    height: 100%;
+    border: 1px solid wheat;
+    border-radius: 1%;
+}
+
+
+
+
+
+
+.n4 {
+    margin:-320px 220px;
+    width: 100px;
+    height: 100px;
+   
+}
+
+.img4 {
+    width: 100%;
+    height: 100%;
+    border: 1px solid wheat;
+    border-radius: 1%;
+}
+
+
+
+
+
+
+
+
+
+
+
+.n5 {
+    margin:420px 50px;
+    width: 100px;
+    height: 100px;
+   
+}
+
+.img5 {
+    width: 100%;
+    height: 100%;
+    border: 1px solid wheat;
+    border-radius: 1%;
+}
+
+
+
+
+
+.n6 {
+    margin:-520px 220px;
+    width: 100px;
+    height: 100px;
+   
+}
+
+.img6 {
+    width: 100%;
+    height: 100%;
+    border: 1px solid wheat;
+    border-radius: 1%;
+}
+
+
+
+
+
+
+.n7 {
+    margin:620px 50px;
+    width: 100px;
+    height: 100px;
+   
+}
+
+.img7 {
+    width: 100%;
+    height: 100%;
+    border: 1px solid wheat;
+    border-radius: 1%;
+}
+
+
+
+
+.n8 {
+    margin:-720px 220px;
+    width: 100px;
+    height: 100px;
+   
+}
+
+.img8 {
+    width: 100%;
+    height: 100%;
+    border: 1px solid wheat;
+    border-radius: 1%;
+}
+
+
+
+
+
+
+.n9 {
+    margin:820px 50px;
+    width: 100px;
+    height: 100px;
+   
+}
+
+.img9 {
+    width: 100%;
+    height: 100%;
+    border: 1px solid wheat;
+    border-radius: 1%;
+}
+
+
+
+
+
+
+
+.n10 {
+    margin:-920px 220px;
+    width: 100px;
+    height: 100px;
+   
+}
+
+.img10 {
+    width: 100%;
+    height: 100%;
+    border: 1px solid wheat;
+    border-radius: 1%;
+}
+
+
