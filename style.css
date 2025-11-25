@@ -1,332 +1,149 @@
+/* GLOBAL RESET va SHIFT */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-.div1 {
-    
-    width: 100%;
-    height: 80px;
-    background-color: rgb(0, 0, 0);
-    border-bottom: 2px solid red;
-    position: fixed;
+    font-family: 'Montserrat', sans-serif; /* Zamonaviy shrift */
 }
 
 body {
-    background-color: black;
-    width: 100%;
-    height: 100000px;
+    background-color: #1a1a1a; /* To'q kulrang-qora fon */
+    color: #ffffff; /* Asosiy matn rangi */
+    min-height: 100vh;
+    padding-top: 80px; /* Fiksatsiyalangan header uchun joy */
 }
 
-img {
-    margin: 12%;
-    
+/* ----------------------------------- */
+/* 1. HEADER DİZAYNI (Yuqoridagi panel) */
+/* ----------------------------------- */
+.main-header {
+    width: 100%;
+    height: 60px;
+    background-color: #000000;
+    border-bottom: 3px solid #e74c3c; /* Qizil chegara */
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.telegram-link i {
+    font-size: 35px;
+    color: #0088cc; /* Telegram ko'k rang */
+    transition: color 0.3s;
+}
+.telegram-link i:hover {
+    color: #e74c3c; /* Hover effekti */
+}
+
+.phone-info {
+    display: flex;
+    align-items: center;
+    color: #e74c3c; /* Kontakt raqami qizil */
+    font-size: 16px;
+    font-weight: bold;
+}
+.phone-info i {
+    font-size: 20px;
+    margin-right: 5px;
+}
+.phone-info span {
+    color: #f1c40f; /* Raqam uchun sariq-tilla rang */
+}
+
+/* ----------------------------------- */
+/* 2. PROFIL DİZAYNI (Rasm va Sarlavha) */
+/* ----------------------------------- */
+.profile-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 0 20px 0;
+}
+
+.main-profile-img {
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
-    width: 300px;
-    height: 300px;
+    border: 5px solid #e74c3c; /* Rasm atrofidagi qizil chegara */
+    object-fit: cover;
+    margin-bottom: 20px;
+    box-shadow: 0 0 20px rgba(231, 76, 60, 0.5); /* Yorqin soya */
 }
 
-
-
-
-
-
-.n1 {
-    margin:20px 50px;
-    width: 100px;
-    height: 100px;
-   
+h1 {
+    font-size: 32px;
+    color: #ffffff;
+    margin-bottom: 5px;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.4);
 }
 
-
-
-.img1{
-    width: 100%;
-    height: 100%;
-    border: 1px solid wheat;
-    border-radius: 1%;
+.album-tag {
+    color: #95a5a6;
+    font-size: 14px;
+    margin-bottom: 30px;
 }
 
-
-
-
-
-
-
-.n2 {
-    
-    
-    margin:-120px 220px;
-    width: 100px;
-    height: 100px;
-    
-   
+/* ----------------------------------- */
+/* 3. TREKLAR RO'YXATI (GRID) */
+/* ----------------------------------- */
+.track-list-grid {
+    display: grid;
+    /* Kichik ekranlar uchun 2 ustun */
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 20px;
+    padding: 20px;
+    max-width: 600px; /* Umumiy kenglikni cheklash */
+    margin: 0 auto;
 }
 
-.img2 {
-    width: 100%;
-    height: 100%;
-    border: 1px solid wheat;
-    border-radius: 1%;
+/* Katta ekranlar uchun 4 ustun */
+@media (min-width: 768px) {
+    .track-list-grid {
+        grid-template-columns: repeat(4, 1fr);
+        max-width: 90%; 
+    }
 }
 
-h2 {
+.track-item {
     text-align: center;
-    color: aliceblue;
+    transition: transform 0.3s;
 }
 
-h4 {
-    text-align: center;
-    color: aliceblue;
+.track-item:hover {
+    transform: scale(1.05); /* Hover effekti: Katta bo'lish */
+    z-index: 10;
 }
 
-i {
-    margin: 5% 4%;
-    font-size: 50px;
+.track-item a {
+    display: block;
+    text-decoration: none;
 }
 
-#loo {
-    margin: -4% ;
-    font-size: 25px;
-    color: aquamarine;
-}
-
-
-.n3 {
-    margin:220px 50px;
-    width: 100px;
-    height: 100px;
-   
-}
-
-.img3 {
+.track-img {
     width: 100%;
-    height: 100%;
-    border: 1px solid wheat;
-    border-radius: 1%;
+    aspect-ratio: 1 / 1; /* Kvadrat rasm */
+    border-radius: 4px;
+    border: 2px solid #34495e; /* To'q chegara */
+    object-fit: cover;
+    margin: 0 0 10px 0; /* Rasmda avvalgi marginni o'chirib, ostiga margin qo'yamiz */
 }
 
-
-
-
-
-
-.n4 {
-    margin:-320px 220px;
-    width: 100px;
-    height: 100px;
-   
+.track-title {
+    font-size: 14px;
+    color: #f1c40f; /* Trek nomi sariq rangda */
+    font-weight: 600;
 }
 
-.img4 {
-    width: 100%;
-    height: 100%;
-    border: 1px solid wheat;
-    border-radius: 1%;
+/* O'CHIRILGAN STYL'LAR: Avvalgi kodingizdagi keraksiz o'lchovlar va marginlar o'chirildi. */
+h2, h4 { /* Bu h1 va .track-title ga almashtirildi */
+    margin: 0;
 }
-
-
-
-
-
-
-
-
-
-
-
-.n5 {
-    margin:420px 50px;
-    width: 100px;
-    height: 100px;
-   
+i { /* Headerga moslab o'zgartirildi */
+    margin: 0;
 }
-
-.img5 {
-    width: 100%;
-    height: 100%;
-    border: 1px solid wheat;
-    border-radius: 1%;
-}
-
-
-
-
-
-.n6 {
-    margin:-520px 220px;
-    width: 100px;
-    height: 100px;
-   
-}
-
-.img6 {
-    width: 100%;
-    height: 100%;
-    border: 1px solid wheat;
-    border-radius: 1%;
-}
-
-
-
-
-
-
-.n7 {
-    margin:620px 50px;
-    width: 100px;
-    height: 100px;
-   
-}
-
-.img7 {
-    width: 100%;
-    height: 100%;
-    border: 1px solid wheat;
-    border-radius: 1%;
-}
-
-
-
-
-.n8 {
-    margin:-720px 220px;
-    width: 100px;
-    height: 100px;
-   
-}
-
-.img8 {
-    width: 100%;
-    height: 100%;
-    border: 1px solid wheat;
-    border-radius: 1%;
-}
-
-
-
-
-
-
-.n9 {
-    margin:820px 50px;
-    width: 100px;
-    height: 100px;
-   
-}
-
-.img9 {
-    width: 100%;
-    height: 100%;
-    border: 1px solid wheat;
-    border-radius: 1%;
-}
-
-
-
-
-
-
-
-.n10 {
-    margin:-920px 220px;
-    width: 100px;
-    height: 100px;
-   
-}
-
-.img10 {
-    width: 100%;
-    height: 100%;
-    border: 1px solid wheat;
-    border-radius: 1%;
-}
-
-
-
-
-
-
-
-
-
-
-.n11 {
-   
-    margin:1050px  220px;
-    width: 100px;
-    height: 100px;
-   
-}
-
-.img11 {
-    width: 100%;
-    height: 100%;
-    border: 1px solid wheat;
-    border-radius: 1%;
-}
-
-
-
-
-
-
-
-
-
-.n12 {
-    
-    margin: -1150px 50px;
-    width: 100px;
-    height: 100px;
-   
-}
-
-.img12 {
-    width: 100%;
-    height: 100%;
-    border: 1px solid wheat;
-    border-radius: 1%;
-}
-
-
-
-
-
-.n13 {
-    
-    margin: 1250px 50px;
-    width: 100px;
-    height: 100px;
-   
-}
-
-.img13 {
-    width: 100%;
-    height: 100%;
-    border: 1px solid wheat;
-    border-radius: 1%;
-}
-
-
-
-
-
-
-
-.n14 {
-    
-    margin: -1350px 220px;
-    width: 100px;
-    height: 100px;
-   
-}
-
-.img14 {
-    width: 100%;
-    height: 100%;
-    border: 1px solid wheat;
-    border-radius: 1%;
-}
-
+/* Avvalgi .n1, .n2, .n3, .img1, .img2 kabi margin asosidagi joylashtirishlar olib tashlandi. */
